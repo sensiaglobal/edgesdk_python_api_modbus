@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: hcc2sdk
-Version: 0.1.0
+Version: 0.1.1
 Summary: SDK API for HCC2
 Home-page: https://edgesdk.sensiadigital.net/
 Author: Sensia
@@ -10,15 +10,28 @@ Platform: UNKNOWN
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-README
+# SDK for HCC2 in python
 
-hcc2sdk is the api package to build/deploy to interface with  HCC2 through modbus
+This packages provides the required interface between an application and HCC2 data using HCC2 modbus server as the data source.
 
-to build a new version of this package, run:
+This package must be installed alon with the application:
 
-./build.sh   <---- this will build the new package distribution files
+### Build
 
-pip install dist/hcc2sdk-0.1.0-py3-none-any.whl --force-reinstall      <------- This install the package for the current user.
+To build a new version of this package:
+```
+./build.sh
+```
+The output of this build is the dist/ folder.
 
+### Notes
+
+1. We recommend not to change this code. 
+2. Should you need to build a new version, you must then copy it into the applications that needs it.
+3. Package installation into the application:
+```
+pip install dist/hcc2sdk-X.X.X-py3-none-any.whl --force-reinstall  
+```
+(X.X.X is the package version number)
 
 
