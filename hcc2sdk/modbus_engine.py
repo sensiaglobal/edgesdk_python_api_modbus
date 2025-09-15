@@ -289,8 +289,17 @@ def scan_analog_register(logger, db, mbl, server, bucket, reg_type):
                 # save to DB
                 #
                 ovalue = fvalue
-            else:
+                #
+            elif dtype == data_type_enum.TYPE_INTEGER:
+                #
+                # Convert to signed
+                #
                 ovalue = convert_unsigned_to_signed (ivalue, vrm.num_registers)
+            else:
+                #
+                # unsigned - live it as it is 
+                #
+                ovalue = ivalue
                 
             value_array.append(ovalue)
 

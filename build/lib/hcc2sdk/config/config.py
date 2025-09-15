@@ -3,7 +3,7 @@
 # LICENSE file in the root directory of this source tree.
 class Config (object):
     def __init__(self):
-        self.version = "0.1.0"
+        self.version = "0.1.1"
         self.variable_file = "appconfig/vars.json"
         self.app = App()
         self.opts = Opts()
